@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagem.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  body::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.75);
+    position: absolute;
+  }
+  .container{
+    position: relative;
+    text-align: center;
+    width: 550px;
+    padding: 50px;
+    background-color: rgb(0,0,0,.8);
+  }
+  h3{
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+  .boxCopy{
+    margin: 15px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    margin-bottom: 20px;
+  }
+  .boxCopy .input{
+    padding: 18px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+  }
+  a{
+    padding: 13px;
+    background-color: #0071ee;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  a::before{
+    content: 'Copiado';
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    background-color: #0071ee;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    z-index: 99;
+    display: none;
+  }
+  a::after{
+    content: '';
+    position: absolute;
+    top: -26px;
+    right: 16px;
+    width: 15px;
+    height: 15px;
+    background-color: #0071ee;
+    transform: rotate(45deg);
+    display: none;
+  }
+  a.active::after,
+  a.active::before{
+    display: block;
+  }
+  .btn{
+    cursor: pointer;
+    border: none;
+    padding: 9px 19px;
+    border-radius: 5px;
+    background-color: #3a3a41;
+    color: #fff;
+  }
+  .btn:hover,
+  a:hover{
+    opacity: 0.9;
+  }
